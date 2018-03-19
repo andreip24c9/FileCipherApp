@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="600.0" maxWidth="550.0" minHeight="200.0" minWidth="446.0" prefHeight="594.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+    <children>
+        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="600.0">
+            <children>
+                <Button fx:id="btn_choose" mnemonicParsing="false" onAction="#chooseFileCLicked" prefHeight="27.0" prefWidth="97.0" text="Choose File" />
+                <ImageView fx:id="img_tick" fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@tick.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                </ImageView>
+                <Label fx:id="lb_path" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="262.0" textAlignment="RIGHT" underline="true">
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+            <VBox.margin>
+                <Insets left="15.0" right="15.0" top="15.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="600.0">
+            <children>
+                <Button fx:id="btn_encrypt" defaultButton="true" mnemonicParsing="false" onAction="#encryptClicked" text="Encrypt">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="btn_decrypt" mnemonicParsing="false" onAction="#decryptClicked" text="Decrypt">
+                    <HBox.margin>
+                        <Insets left="15.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+            <VBox.margin>
+                <Insets left="15.0" right="15.0" top="15.0" />
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="TOP_RIGHT" prefHeight="21.0" prefWidth="433.0">
+            <VBox.margin>
+                <Insets left="15.0" right="15.0" top="15.0" />
+            </VBox.margin>
+            <children>
+                <PasswordField fx:id="tv_password" prefHeight="27.0" prefWidth="147.0" promptText="Password">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </PasswordField>
+                <Button fx:id="btn_go" mnemonicParsing="false" onAction="#goClicked" text="Go" />
+            </children>
+        </HBox>
+        <TextArea fx:id="ta_file" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="462.0" prefWidth="477.0">
+            <VBox.margin>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </VBox.margin>
+        </TextArea>
+    </children>
+</VBox>
